@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>polyglot cloud</title>
+
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/clipboard.min.js"></script>
+<script type="text/javascript" src="js/responsivevoice.js"></script>
+<script type="text/javascript" src="js/polyglot.js"></script>
+
+</head>
+
+<body>
+<div class="input_fields_wrap">
+  <div><span id="sourceLanguage">English</span>: <input type="text" id="theSource" size="45" value="source"></div>
+<br>
+    <button class="polyglotButton" id="btn" >Translate</button>
+  <button class="polyglotButton" id="clearButton" >Clear</button>
+  <button class="polyglotButton" id="copyButton" style="display:none;" data-clipboard-target="#theSource">Copy to clipboard</button>
+</div>
+
+<div id="msgid"></div>
+<br>
+<button class="polyglotButton" id="copyButton2" style="display:none;" data-clipboard-target="#msgid" >Copy to clipboard</button>
+
+
+<br><br><br>
+Select source language:
+<div id="sourceSelector"></div>
+
+<br><br>
+Remove or add languages used for translations:<br>
+
+
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td {font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;vertical-align:top;border-color:#D3D3D3;}
+</style>
+<table class="tg">
+  <tr>
+    <td class="tg-yw4l">
+    
+  <select name="removeSelector" id="removeSelector" multiple size="8">
+
+  </select>
+    </td>
+    <td class="tg-baqh">
+    
+  <button class="remove_button" id="removeButton" >&gt;&gt; remove language</button>
+
+    </td>
+    <td class="tg-yw4l">
+    	
+  <button class="add_button" id="addButton" >add language &lt;&lt;</button>
+
+    	</td>
+    <td class="tg-yw4l">
+      <select name="addSelector" id="addSelector" multiple size="8">
+
+  </select>
+    </td>
+  </tr>
+</table>
+
+  
+  	<br /><br /><button id="resetButton" onclick="resetIt()">Reset</button>  
+  
+
+<br><br><br>
+<div id="footer" style="font-family: Helvetica, Sans-Serif;">
+Powered by <a href="https://cloud.google.com">Google Cloud</a> (translation), 
+<a href="https://github.com">GitHub</a> (hosting).<br>
+Version 39 (web design) / <span id="jsVersion">?</span> (programming).<br>
+For list of latest changes see: <a href="rn.html">release notes</a>.
+<style>
+#msgid {
+  line-height: 1.7em;
+}
+</style>
+<br />
+
+
+</body>
